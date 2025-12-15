@@ -1,5 +1,11 @@
+import { supabase } from "../lib/supabase";
 export default function Header() {
-  const logoUrl = "https:tweeeywyoxldzufahugh.supabase.co/storage/v1/object/public/image/Logo.png"
+    const { data } = supabase
+      .storage
+      .from("image")
+      .getPublicUrl("Logo.png");
+  
+    const iconUrl = data.publicUrl;
 
   return (
     <header
@@ -12,7 +18,7 @@ export default function Header() {
       }}
     >
       <img
-        src={logoUrl}
+        src={iconUrl}
         alt="Pneux Express"
         style={{ height: "80px", objectFit: "contain" }}
       />

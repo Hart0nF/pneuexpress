@@ -466,3 +466,7 @@ option{
 .dernier{
   margin-bottom: 3.5rem;
 }
+
+::placeholder{
+  color: white;
+}

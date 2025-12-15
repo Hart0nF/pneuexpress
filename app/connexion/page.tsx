@@ -56,14 +56,14 @@ export default function ConnexionPage() {
   return (
     <div className="connexion-container">
       <form className="connexion-box" onSubmit={handleLogin}>
-        <input
+        <input className="normal"
           type="text"
           placeholder="Courriel"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <input
+        <input className="normal"
           type="password"
           placeholder="Mot de passe"
           value={password}

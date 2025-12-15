@@ -470,3 +470,7 @@ option{
 ::placeholder{
   color: white;
 }
+
+.normal::placeholder{
+  color: #222;
+}
